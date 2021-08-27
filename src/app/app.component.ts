@@ -10,8 +10,20 @@ import { filter, mapTo } from 'rxjs/operators';
       your loader will appear only when you try to reach route resolve data
     </p>
     <p>App Works</p>
+    <button
+      type="button"
+      [routerLink]="['/', { outlets: { secondOutlet: ['sec-route'] } }]"
+    >
+      to second route
+    </button>
+    <button
+      type="button"
+      [routerLink]="['/', { outlets: { secondOutlet: null } }]"
+    >
+      away form second route
+    </button>
     <router-outlet></router-outlet>
-    <router-outlet name="second-outlet"></router-outlet>
+    <router-outlet name="secondOutlet"></router-outlet>
   `,
   styles: [''],
 })

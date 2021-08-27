@@ -14,8 +14,9 @@ const routes: Routes = [
       import('./second-route/second-route.module').then(
         (m) => m.SecondRouteModule
       ),
-    outlet: 'second-outlet',
+    outlet: 'secondOutlet',
   },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
 
 @NgModule({

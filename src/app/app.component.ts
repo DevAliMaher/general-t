@@ -11,6 +11,7 @@ import { filter, mapTo } from 'rxjs/operators';
     </p>
     <p>App Works</p>
     <router-outlet></router-outlet>
+    <router-outlet name="second-outlet"></router-outlet>
   `,
   styles: [''],
 })

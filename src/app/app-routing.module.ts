@@ -7,6 +7,15 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./home/home.module').then((m) => m.HomeModule),
   },
+  // multi routes
+  {
+    path: 'sec-route',
+    loadChildren: () =>
+      import('./second-route/second-route.module').then(
+        (m) => m.SecondRouteModule
+      ),
+    outlet: 'second-outlet',
+  },
 ];
 
 @NgModule({
